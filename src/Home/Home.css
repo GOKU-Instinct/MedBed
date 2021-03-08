@@ -1,0 +1,12 @@
+.Box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 32rem;
+}
+.Hospitals {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  margin: 1rem;
+}

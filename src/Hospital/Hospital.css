@@ -1,0 +1,10 @@
+.detail_box {
+  margin: 0.2rem;
+  background-color: #78c4d4;
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.name{
+    font-size: 1.3rem;
+}

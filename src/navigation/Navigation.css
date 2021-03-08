@@ -1,0 +1,15 @@
+.navigation_list a:link {
+  list-style: none;
+}
+.navigation_list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+}
+.navigation a:link,
+.navigation a:visited {
+  text-decoration: none;
+  color: white;
+  margin-left: 1rem;
+}
