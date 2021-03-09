@@ -1,0 +1,81 @@
+body{
+    background-color: #7868e6;
+
+}
+/* heading and heading paragraph */
+.contactHeading {
+    color: #ffffff;
+    font-family: 'Nanum Gothic', sans-serif;
+    margin: 5rem auto 0 auto;
+    text-align: center;
+}
+.contactHeading h1{
+    font-weight: bolder;
+}
+.contactHeading p{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+/* properties for flex container */
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Nanum Gothic', sans-serif;
+    justify-content: center;
+}
+.flexItem{
+    margin: 3rem 3rem 0 3rem;
+    padding: 2rem;
+    width: 30rem;
+}
+/* flex container one ie address phone and email */
+.address, .phone, .email {
+    color: #ffffff;
+    font-weight: bolder;
+    margin: 0 0 3rem 7rem ;
+}
+.address h3, .phone h3, .email h3 {
+    color: #78c4d4;
+    font-weight: bolder;
+}
+.locationImg, .phoneImg, .emailImg {
+    background-color:#ffffff;
+    border-radius: 100%;
+    float: left;
+    height: 5rem;
+    width: 5rem;
+}
+/* font awesome used here  */
+.fa-envelope, .fa-phone-alt, .fa-map-marker-alt {
+    display: block;
+    margin: auto;
+    margin-top: 22px;
+    text-align: center;
+}
+/* flex container two ie send message  */
+.UserName, .UserEmail, .UserMessage, .button_ {
+    margin : 0.5rem;
+}
+.UserMessage {
+    margin-top: 2rem;
+}
+input {
+    border: 0;
+    border-bottom:  2px solid ;
+}
+input, select, textarea{
+    color: grey;
+}
+
+textarea:focus, input:focus {
+    color: black;
+}
+.contactbox {
+    background-color: #ffffff;
+    margin-bottom: 5rem;
+}
+.contactboxHeading {
+    color: #78c4d4;
+    font-weight: 600;
+}
