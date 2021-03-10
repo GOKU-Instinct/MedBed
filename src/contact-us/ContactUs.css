@@ -60,7 +60,7 @@
 .UserMessage {
   margin-top: 2rem;
 }
-input {
+#UserEmail, #UserName {
   border: 0;
   border-bottom:  2px solid ;
 }

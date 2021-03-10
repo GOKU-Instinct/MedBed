@@ -62,9 +62,15 @@ function ContactUs() {
               action="contactus.html"
               method="post"
             >
-              <TextField id="standard-basic" label="Name" />
-
-              <TextField id="standard-basic" label="Email" />
+              <div class="UserName">
+                <label for="UserName"></label><br></br>
+                <input class="inputUserEmail" type="text" name="Full Name" id="UserName" placeholder="Full Name"size="45"></input><br></br>
+              </div>
+                      
+              <div class="UserEmail">
+                <label for="UserEmail"></label><br></br>
+                <input class = "inputUserEmail" type="text" name="Email" id="UserEmail" placeholder="Email"size="45"></input><br></br>
+              </div>
 
               <div className="UserMessage">
                 <label for="UserMessage">Type your message here</label>
