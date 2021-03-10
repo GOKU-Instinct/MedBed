@@ -14,15 +14,17 @@ const top100Films = [
 function Home() {
   return (
     <>
-      <div className="Search_Box">
-        <Search id="Location"></Search>
-        <Search id="Wards"></Search>
-      </div>
-      <div className="Box">
-        <div className="Hospitals">
-          <HospitalList list={top100Films}></HospitalList>
+      <div className="wrapper">
+        <div className="Search_Box">
+          <Search id="Location"></Search>
+          <Search id="Wards"></Search>
         </div>
-        <div className="Map"></div>
+        <div className="Box">
+          <div className="Hospitals">
+            <HospitalList list={top100Films}></HospitalList>
+          </div>
+          <div className="Map"></div>
+        </div>
       </div>
     </>
   );

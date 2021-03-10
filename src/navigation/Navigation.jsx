@@ -17,6 +17,8 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
+import ContactUs from "../contact-us/ContactUs";
+import Register from "../register/Register";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -48,7 +50,9 @@ function Navigation() {
               <Typography variant="h6">MEDBED</Typography>
             </Link>
             <ul className="navigation_list">
+              <Link to="/contact_us">CONTACT US</Link>
               <Link to="/about">ABOUT</Link>
+              <Link to="/register">REGISTER</Link>
               <Link to="/login">LOGIN</Link>
             </ul>
           </Toolbar>
@@ -56,6 +60,8 @@ function Navigation() {
       </div>
       <Switch>
         <Route path="/" exact strict component={Home} />
+        <Route path="/contact_us" exact strict component={ContactUs} />
+        <Route path="/register" exact strict component={Register} />
         {/* <Route path="/about" exact strict component={About} />
   <Route path="/login" exact strict component={Login} />*/}
       </Switch>
