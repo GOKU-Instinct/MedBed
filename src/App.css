@@ -1,0 +1,10 @@
+/* .App {
+  text-align: center;
+} */
+.Search_Box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
