@@ -1,7 +1,6 @@
 .register-heading {
     color: black;
     padding: 10px;
-    background-color: rgb(212, 209, 209);
     font-family: 'Nanum Gothic', sans-serif;
     margin: 4% auto 0 auto;
     text-align: center;
@@ -22,8 +21,13 @@
 
 #form{
   display: flex;
+  border: 2px solid;
+  background-color: rgba(211, 211, 211, 0.37);
+  padding: 2%;
+  border-radius: 5px;
+  border-color: #45a049;
   flex-direction: column;
-  margin: 5rem 10% 1rem 10%;
+  margin: 4% 25% 4% 25%;
 }
 
 #mobile_number{
@@ -50,7 +54,7 @@
     padding: 0.8rem;
 }
 
-input[type=submit] {
+#submit-button{
     width: 100%;
     background-color: #4CAF50;
     color: white;
@@ -63,6 +67,6 @@ input[type=submit] {
   
 }
 
-input[type=submit]:hover {
+#submit-button:hover {
     background-color: #45a049;
 }
