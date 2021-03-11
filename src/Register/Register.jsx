@@ -6,6 +6,7 @@ import Select from "@material-ui/core/Select";
 import Input from '@material-ui/core/Input';
 import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
+import Button from '@material-ui/core/Button';
 
 // function getWindowDimensions() {
 //   const { innerWidth: width, innerHeight: height } = window;
@@ -39,7 +40,7 @@ function Register() {
     <>
       <section>
         <div className="register-heading">
-          <h1>Registeration</h1>
+          <h1>Registration</h1>
           <p>Input proper details to get registered</p>
         </div>
       </section>
@@ -149,8 +150,7 @@ function Register() {
           type="password" 
           variant="outlined" 
         />
-
-        <input type="submit"></input>
+        <Button variant="outlined" id="submit-button">Register</Button>
       </form>
     </>
   );
