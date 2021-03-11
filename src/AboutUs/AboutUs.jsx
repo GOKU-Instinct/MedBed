@@ -1,5 +1,7 @@
 import React from "react";
 import "./AboutUs.css";
+import ashish from "./ashish.jpeg";
+import amit from "./amit.jpg";
 
 function AboutUs() {
   return (
@@ -45,7 +47,7 @@ function AboutUs() {
               <div className="person-image">
                 <a href="https://www.linkedin.com/in/ashish-singh-b6928a1b0/">
                   <img
-                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    src={ashish}
                     alt=""
                   />
                 </a>
@@ -121,7 +123,7 @@ function AboutUs() {
               <div className="person-image">
                 <a href="https://www.linkedin.com/in/amit-kumar-1023191b4/">
                   <img
-                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    src={amit}
                     alt=""
                   />
                 </a>

@@ -406,6 +406,8 @@ form:after {
   position: relative;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   width: 120px;
+  padding-bottom: 20px; 
+  padding-top: 9px;
 }
 #content form input[type="submit"]:hover {
   background: rgb(254, 193, 81);
@@ -500,4 +502,7 @@ form:after {
 .button a:hover {
   background-position: 0 -135px;
   color: #00aeef;
+}
+.bgsvg{
+	background-image: url("./bg1.svg");
 }

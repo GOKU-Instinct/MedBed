@@ -7,6 +7,8 @@ function Login() {
       <section id="content">
         <form action="">
           <h1>Login to MedBed</h1>
+		  <br></br>
+		  <br></br>
           <div>
             <input
               type="text"
@@ -15,6 +17,7 @@ function Login() {
               id="username"
             />
           </div>
+		  <br></br>
           <div>
             <input
               type="password"
