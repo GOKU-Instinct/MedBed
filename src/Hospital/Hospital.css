@@ -1,25 +1,13 @@
 .detail_box {
-  margin: 0.2rem;
-  background-color: #78c4d4;
+  margin: 0.2rem; 
+  background-color: #3f51b5;
   color: white;
   padding: 1rem;
   border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .name {
   font-size: 1.3rem;
-}
-.Box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 32rem;
-}
-.Hospitals {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  overflow-y: auto;
-  margin: 1rem;
-}
-.Map {
-  height: 100%;
 }

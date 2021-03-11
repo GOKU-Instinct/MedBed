@@ -6,6 +6,7 @@ import Button from "@material-ui/core/Button";
 const useStyles = makeStyles({
   root: {
     color: "white",
+    border: "1px solid white",
   },
 });
 
@@ -14,6 +15,7 @@ function Hospital(props) {
   return (
     <div className="detail_box">
       <div className="name">{props.name}</div>
+      <div className="beds">{props.beds}</div>
       <Button variant="outlined" className={classes.root}>
         BOOK NOW
       </Button>

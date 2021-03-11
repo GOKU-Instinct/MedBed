@@ -20,7 +20,7 @@ import {
 import ContactUs from "../ContactUs/ContactUs";
 import Register from "../Register/Register";
 import AboutUs from "../AboutUs/AboutUs";
-import Login from "../Login/Login"
+import Login from "../Login/Login";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,9 +38,6 @@ function Navigation() {
       <div className={classes.root}>
         <AppBar position="static" className="navigation">
           <Toolbar variant="dense">
-
-
-            <img src="https://img.icons8.com/dusk/64/000000/hospital-bed.png" />
             <Link to="/">
               <Typography variant="h6">MEDBED</Typography>
             </Link>
@@ -59,7 +56,6 @@ function Navigation() {
         <Route path="/register" exact strict component={Register} />
         <Route path="/about" exact strict component={AboutUs} />
         <Route path="/login" exact strict component={Login} />
-        
       </Switch>
     </Router>
   );
