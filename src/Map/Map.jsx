@@ -27,26 +27,26 @@ function Map() {
     const { lng, lat } = map.getCenter();
     // fetch new data
     // const results = await fetchFakeData({ longitude: lng, latitude: lat });
-    let location = [
-      [81.87126799737071, 25.399627335716858],
-      [81.86142802620783, 25.459326680089156],
-      [81.84244418387946, 25.45280077140636],
-      [81.85422361271549, 25.457624438869768],
-    ];
-    const results = location;
-    console.log(results);
-    let val = 1;
+    // let location = [
+    //   [81.87126799737071, 25.399627335716858],
+    //   [81.86142802620783, 25.459326680089156],
+    //   [81.84244418387946, 25.45280077140636],
+    //   [81.85422361271549, 25.457624438869768],
+    // ];
+    // const results = location;
+    // console.log(results);
+    // let val = 1;
     // iterate through the feature collection and append marker to the map for each feature
-    results.forEach((result) => {
-      // const { id, geometry } = result;
-      // create marker node
-      const coordinates = result;
-      const markerNode = document.createElement("div");
-      ReactDOM.render(<Marker id={val} />, markerNode);
-      // add marker to map
-      val++;
+    // results.forEach((result) => {
+    //   // const { id, geometry } = result;
+    //   // create marker node
+    const coordinates = [81.87126799737071, 25.399627335716858];
+    const markerNode = document.createElement("div");
+    ReactDOM.render(<Marker id={1} />, markerNode);
+    //   // add marker to map
+    //   val++;
       new mapboxgl.Marker(markerNode).setLngLat(coordinates).addTo(map);
-    });
+    // });
     // });
     // clean up on unmount
     return () => map.remove();
