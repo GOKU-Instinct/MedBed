@@ -23,6 +23,9 @@ function Home() {
     <>
       <div className="hero_section">
         <img className="circle" src={circle} />
+        <div className="circle1_container">
+          <img className="circle1" src={circle} />
+        </div>
         <div className="image"></div>
         <div className="main_section">
           <h1>Welcome</h1>

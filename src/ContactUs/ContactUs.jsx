@@ -68,31 +68,35 @@ function ContactUs() {
         </div>
         <div className="flexContainer">
           <div className="contactDetails flexItem">
-            <div className="locationImg">
-              <i className="fas fa-map-marker-alt fa-2x"></i>
+            <div className="contact_wrapper">
+              <div className="locationImg">
+                <i className="fas fa-map-marker-alt fa-2x"></i>
+              </div>
+              <div className="address">
+                <h3>Address</h3>
+                <p>
+                  221 Baker
+                  London, England
+                </p>
+              </div>
             </div>
-            <div className="address">
-              <h3>Address</h3>
-
-              <p>
-                221 Baker Street <br></br>
-                London, England
-              </p>
+            <div className="contact_wrapper">
+              <div className="phoneImg">
+                <i className="fas fa-phone-alt fa-2x"></i>
+              </div>
+              <div className="phone">
+                <h3>Phone</h3>
+                <p>123456789</p>
+              </div>
             </div>
-            <div className="phoneImg">
-              <i className="fas fa-phone-alt fa-2x"></i>
-            </div>
-            <div className="phone">
-              <h3>Phone</h3>
-              <p>123456789</p>
-            </div>
-
-            <div className="emailImg">
-              <i className="far fa-envelope fa-2x"></i>
-            </div>
-            <div className="email">
-              <h3>Email</h3>
-              <p>medbed@gmail.com</p>
+            <div className="contact_wrapper">
+              <div className="emailImg">
+                <i className="far fa-envelope fa-2x"></i>
+              </div>
+              <div className="email">
+                <h3>Email</h3>
+                <p>medbed@gmail.com</p>
+              </div>
             </div>
           </div>
 
