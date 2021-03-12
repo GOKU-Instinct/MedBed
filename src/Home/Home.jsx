@@ -4,6 +4,7 @@ import HospitalList from "../Hospital/HospitalList";
 import "./Home.css";
 import Map from "../Map/Map";
 import logo from "./Logo.png";
+import circle from "./circle.png";
 
 const hospitals = [
   "Sapna Hospital",
@@ -21,7 +22,7 @@ function Home() {
   return (
     <>
       <div className="hero_section">
-        {/*<img src={logo} />*/}
+        <img className="circle" src={circle} />
         <div className="image"></div>
         <div className="main_section">
           <h1>Welcome</h1>

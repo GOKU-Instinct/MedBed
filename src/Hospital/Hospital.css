@@ -11,3 +11,10 @@
 .name {
   font-size: 1.3rem;
 }
+.circle{
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  right: 1%;
+  top: 5%;
+}
