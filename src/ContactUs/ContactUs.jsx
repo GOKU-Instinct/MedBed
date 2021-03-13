@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import Nav from "../Nav";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -58,6 +59,7 @@ function ContactUs() {
 
   return (
     <>
+      <Nav></Nav>
       <div className="ContactUs">
         <div className="contactHeading">
           <h1>Contact Us</h1>
@@ -74,10 +76,7 @@ function ContactUs() {
               </div>
               <div className="address">
                 <h3>Address</h3>
-                <p>
-                  221 Baker
-                  London, England
-                </p>
+                <p>221 Baker London, England</p>
               </div>
             </div>
             <div className="contact_wrapper">

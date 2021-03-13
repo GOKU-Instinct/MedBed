@@ -11,11 +11,11 @@
 .ContactUs {
   width: 100%;
   height: 100%;
-  background-color: #3f51b5;
+  background-color: #fbeeac;
   border-radius: 0% 0% 100% 0%;
 }
 .contactHeading {
-  color: white;
+  color: black;
   font-family: "Nanum Gothic", sans-serif;
   padding: 2rem 0 0 0;
   text-align: center;
@@ -40,7 +40,7 @@
   padding: 2rem;
   width: 30rem;
 }
-.contact_wrapper{
+.contact_wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -50,14 +50,14 @@
 .address,
 .phone,
 .email {
-  color: #8ac4d0;
+  color: #28527a;
   font-weight: bolder;
   padding-left: 1rem;
 }
 .address h3,
 .phone h3,
 .email h3 {
-  color: white;
+  color: black;
   font-weight: bolder;
 }
 .locationImg,
@@ -108,10 +108,10 @@ select,
 .contactbox {
   background-color: #ffffff;
   margin-bottom: 1rem;
-  /* border: 1px solid black; */
+  border: 1px solid #fbeeac;
 }
 .contactboxHeading {
-  color: #78c4d4;
+  color: #28527a;
   font-weight: 600;
 }
 .UserMessage textarea {

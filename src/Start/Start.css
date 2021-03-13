@@ -1,0 +1,48 @@
+.hero_section {
+  display: grid;
+  grid-template-columns: auto auto;
+  position: relative;
+}
+.main_section_wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #fbf6f0;
+}
+.main_section {
+  /* height: 100%; */
+  position: relative;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  line-height: 1.5rem;
+  top: 30%;
+  /* bottom: 50%; */
+}
+.main_section h1 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.main_section p {
+  /* padding-right: 3rem;
+    padding-left: 3rem; */
+  font-size: larger;
+}
+.image {
+  background-image: url(../Images/Logo.png);
+  width: 50vw;
+  height: 100vh;
+}
+.circle {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  right: 1%;
+  top: 10%;
+}
+.circle1 {
+  width: 4rem;
+  height: 4rem;
+}
+.circle1_container {
+  position: absolute;
+  bottom: 1%;
+}

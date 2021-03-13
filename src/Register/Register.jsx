@@ -11,6 +11,7 @@ import hospitalimg from "./hospital.png";
 import axios from "axios";
 import { userContext } from "../UserContext";
 import { useHistory, Redirect } from "react-router-dom";
+import Nav from "../Nav";
 
 // function getWindowDimensions() {
 //   const { innerWidth: width, innerHeight: height } = window;
@@ -31,51 +32,51 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Register() {
-
-  let states = [ "Andhra Pradesh",
-                "Arunachal Pradesh",
-                "Assam",
-                "Bihar",
-                "Chhattisgarh",
-                "Goa",
-                "Gujarat",
-                "Haryana",
-                "Himachal Pradesh",
-                "Jammu and Kashmir",
-                "Jharkhand",
-                "Karnataka",
-                "Kerala",
-                "Madhya Pradesh",
-                "Maharashtra",
-                "Manipur",
-                "Meghalaya",
-                "Mizoram",
-                "Nagaland",
-                "Odisha",
-                "Punjab",
-                "Rajasthan",
-                "Sikkim",
-                "Tamil Nadu",
-                "Telangana",
-                "Tripura",
-                "Uttarakhand",
-                "Uttar Pradesh",
-                "West Bengal",
-                "Andaman and Nicobar Islands",
-                "Chandigarh",
-                "Dadra and Nagar Haveli",
-                "Daman and Diu",
-                "Delhi",
-                "Lakshadweep",
-                "Puducherry"
-              ]
+  let states = [
+    "Andhra Pradesh",
+    "Arunachal Pradesh",
+    "Assam",
+    "Bihar",
+    "Chhattisgarh",
+    "Goa",
+    "Gujarat",
+    "Haryana",
+    "Himachal Pradesh",
+    "Jammu and Kashmir",
+    "Jharkhand",
+    "Karnataka",
+    "Kerala",
+    "Madhya Pradesh",
+    "Maharashtra",
+    "Manipur",
+    "Meghalaya",
+    "Mizoram",
+    "Nagaland",
+    "Odisha",
+    "Punjab",
+    "Rajasthan",
+    "Sikkim",
+    "Tamil Nadu",
+    "Telangana",
+    "Tripura",
+    "Uttarakhand",
+    "Uttar Pradesh",
+    "West Bengal",
+    "Andaman and Nicobar Islands",
+    "Chandigarh",
+    "Dadra and Nagar Haveli",
+    "Daman and Diu",
+    "Delhi",
+    "Lakshadweep",
+    "Puducherry",
+  ];
 
   const classes = useStyles();
 
   let history = useHistory();
   const { setHospitalName } = useContext(userContext);
   let hospital = JSON.parse(localStorage.getItem("hospital"));
-  
+
   const [newHospital, setNewHospital] = React.useState({
     name: "",
     mobile: "",
@@ -84,58 +85,58 @@ function Register() {
     password: "",
     city: "",
     street: "",
-    state: ""
+    state: "",
   });
 
-  function handleChange (event) {
-      const {name, value} = event.target;
-      setNewHospital(previousValues => {
-          return {
-              ...previousValues,
-              [name]: value
-          }
-      })
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setNewHospital((previousValues) => {
+      return {
+        ...previousValues,
+        [name]: value,
+      };
+    });
   }
 
   function sendData() {
-      axios.post("http://localhost:5400/register", newHospital)
-      .then(response => {
-          if(response.data === "This Hospital is already registered.") {
-              window.alert(response.data);
-          }
-          else {
-              localStorage.setItem("hospital", JSON.stringify(response.data));
-              setHospitalName("LOGOUT");
-              history.push("/");
-          }
+    axios
+      .post("http://localhost:5400/register", newHospital)
+      .then((response) => {
+        if (response.data === "This Hospital is already registered.") {
+          window.alert(response.data);
+        } else {
+          localStorage.setItem("hospital", JSON.stringify(response.data));
+          setHospitalName("LOGOUT");
+          history.push("/");
+        }
       })
-      .catch(err => {
-          console.log(err);
-      })
-  }
-
-
-  function submitHospital(event) {
-      event.preventDefault();
-      sendData();
-      setNewHospital({
-        name: "",
-        mobile: "",
-        email: "",
-        beds: "",
-        password: "",
-        city: "",
-        street: "",
-        state: ""
+      .catch((err) => {
+        console.log(err);
       });
   }
 
-  if(hospital) {
-      return <Redirect to="/"/>
+  function submitHospital(event) {
+    event.preventDefault();
+    sendData();
+    setNewHospital({
+      name: "",
+      mobile: "",
+      email: "",
+      beds: "",
+      password: "",
+      city: "",
+      street: "",
+      state: "",
+    });
+  }
+
+  if (hospital) {
+    return <Redirect to="/" />;
   }
 
   return (
     <>
+      <Nav></Nav>
       <div className="register_wrapper">
         <img src={hospitalimg} width="50%" height="50%" />
         <div className="form_wrapper">
@@ -145,10 +146,7 @@ function Register() {
               <p>Input proper details to get registered</p>
             </div>
           </section>
-          <form
-            id="form"
-            action=""
-          >
+          <form id="form" action="">
             <label for="hospital_name">Hospital Name</label>
             <TextField
               required
@@ -170,7 +168,14 @@ function Register() {
               variant="outlined"
             />
             <label for="email">Email</label>
-            <TextField value={newHospital.email} onChange={handleChange} required name="email" id="email" variant="outlined" />
+            <TextField
+              value={newHospital.email}
+              onChange={handleChange}
+              required
+              name="email"
+              id="email"
+              variant="outlined"
+            />
 
             {/*<InputLabel htmlFor="state">State</InputLabel>*/}
             <label for="state">State</label>
@@ -199,7 +204,14 @@ function Register() {
               onChange={handleChange}
             />
             <label for="City">City</label>
-            <TextField required name="city" id="city" variant="outlined" onChange={handleChange} value={newHospital.city} />
+            <TextField
+              required
+              name="city"
+              id="city"
+              variant="outlined"
+              onChange={handleChange}
+              value={newHospital.city}
+            />
             <label for="beds">Number of Beds</label>
             <TextField
               required
@@ -220,7 +232,12 @@ function Register() {
               value={newHospital.password}
               onChange={handleChange}
             />
-            <Button onClick={submitHospital} variant="outlined" id="submit-button" type="submit">
+            <Button
+              onClick={submitHospital}
+              variant="outlined"
+              id="submit-button"
+              type="submit"
+            >
               Register
             </Button>
           </form>

@@ -10,9 +10,10 @@
 .navigation a:link,
 .navigation a:visited {
   text-decoration: none;
-  color: white;
+  color: black;
   margin-left: 1rem;
 }
 Typography{
-  color: white;
+  color: black;
+  font-weight: bolder;
 }
