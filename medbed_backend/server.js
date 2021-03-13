@@ -21,11 +21,13 @@ mongoose.connect("mongodb://localhost:27017/medbedDB", {
 
 const hospitalSchema = {
     name: String,
-    rnumber: String,
     mobile: String,
     email: String,
     beds: String,
-    password: String
+    password: String,
+    city: String,
+    street: String,
+    state: String
 }
 
 const Hospital = mongoose.model("Hospital", hospitalSchema);
@@ -60,27 +62,25 @@ app.post("/contact", (req, res) => {
 
 app.post("/update/:id", (req, res) => {
     const id = req.params.id;
-    Hospital.findOne({_id: id}, (err, foundHospital) => {
+    Hospital.findOneAndUpdate({_id: id}, {$set: {beds: req.body.bedCount}}, {new: true}, (err, doc) => {
         if(err) {
             console.log(err);
         }
         else {
-            if(foundHospital) {
-                Hospital.updateOne({_id: id}, {beds: req.body.bedCount});
-            }
+            console.log(doc);
         }
-    })
+    });
 })
 
 app.post("/login", (req, res) => {
     const data = req.body;
-    Hospital.findOne({email: _.toLower(data.email)}, (err, foundHospital) => {
+    Hospital.findOne({email: _.toLower(data.username)}, (err, foundHospital) => {
         if(!err) {
             if(!foundHospital) {
                 res.send("This Hospital is not registered. Please register to proceed.")
             }
             else {
-                bcrypt.compare(req.body.password, foundUser.password, function(err, result) {
+                bcrypt.compare(req.body.password, foundHospital.password, function(err, result) {
                     if(result === true) {
                         res.send(foundHospital);
                     }
@@ -105,13 +105,15 @@ app.post("/register", (req, res) => {
                     if(!foundHospital) {
                         const newHospital = new Hospital({
                             name: data.name,
-                            rnumber: data.registration,
                             mobile: data.mobile,
-                            email: data.email,
+                            email: _.toLower(data.email),
                             beds: data.beds,
-                            password: hash
+                            password: hash,
+                            city: data.city,
+                            street: data.street,
+                            state: data.state
                         })
-                        Hospital.insertMany([newUser], err => {
+                        Hospital.insertMany([newHospital], err => {
                             if(err) {
                                 console.log(err);
                             }
@@ -129,5 +131,5 @@ app.post("/register", (req, res) => {
 
 
 app.listen(5400, () => {
-    console.log("server started at port 5000");
+    console.log("server started at port 5400");
 })

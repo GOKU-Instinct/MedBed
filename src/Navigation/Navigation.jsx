@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
@@ -8,6 +8,8 @@ import { fade, makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import "./Navigation.css";
+import { userContext } from "../UserContext";
+import UpdateBed from "../UpdateBed/UpdateBed";
 
 import Home from "../Home/Home";
 import {
@@ -16,11 +18,13 @@ import {
   BrowserRouter as Router,
   Switch,
   Redirect,
+  useHistory,
 } from "react-router-dom";
 import ContactUs from "../ContactUs/ContactUs";
 import Register from "../Register/Register";
 import AboutUs from "../AboutUs/AboutUs";
 import Login from "../Login/Login";
+import { json } from "body-parser";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,8 +36,21 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Navigation() {
+
+  const hospital = JSON.parse(localStorage.getItem("hospital"));
+  let history = useHistory();
+  const [hospitalName, setHospitalName] = useState("LOGIN");
+
+  function logout(event) {
+    event.preventDefault();
+    setHospitalName("LOGIN");
+    localStorage.clear();
+  }
+
+
   const classes = useStyles();
   return (
+    <userContext.Provider value = {{hospitalName, setHospitalName}}>
     <Router>
       <div className={classes.root}>
         <AppBar position="static" className="navigation">
@@ -45,7 +62,7 @@ function Navigation() {
               <Link to="/contact_us">CONTACT US</Link>
               <Link to="/about">ABOUT</Link>
               <Link to="/register">REGISTER</Link>
-              <Link to="/login">LOGIN</Link>
+              { !hospital ? <Link to="/login">LOGIN</Link> : <Link onClick={logout} to="/">LOGOUT</Link> }
             </ul>
           </Toolbar>
         </AppBar>
@@ -56,8 +73,10 @@ function Navigation() {
         <Route path="/register" exact strict component={Register} />
         <Route path="/about" exact strict component={AboutUs} />
         <Route path="/login" exact strict component={Login} />
+        <Route path="/updatebed" exact strict component={UpdateBed} />
       </Switch>
     </Router>
+    </userContext.Provider>
   );
 }
 
