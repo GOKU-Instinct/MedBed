@@ -25,6 +25,7 @@
 }
 .contactHeading p {
   font-size: 1.1rem;
+  margin-top: 2%;
   font-weight: 600;
 }
 /* properties for flex container */
@@ -50,7 +51,7 @@
 .address,
 .phone,
 .email {
-  color: #28527a;
+  color: #046582;
   font-weight: bolder;
   padding-left: 1rem;
 }
@@ -58,13 +59,21 @@
 .phone h3,
 .email h3 {
   color: black;
+  font-size: 1.4rem;
   font-weight: bolder;
+}
+.address p,
+.phone p,
+.email p {
+  font-size: 1rem;
+  margin-top: 4%;
 }
 .locationImg,
 .phoneImg,
 .emailImg {
   background-color: #ffffff;
   border-radius: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   float: left;
   height: 5rem;
   width: 5rem;
@@ -78,12 +87,19 @@
   margin-top: 22px;
   text-align: center;
 }
+.fa-envelope:hover,
+.fa-phone-alt:hover,
+.fa-map-marker-alt:hover {
+  color: #fdb827 !important;
+}
+
 /* flex container two ie send message  */
 .UserName,
 .UserEmail,
 .UserMessage,
 .button_ {
   margin: 0.5rem;
+
 }
 .UserMessage {
   margin-top: 3rem;
@@ -109,9 +125,10 @@ select,
   background-color: #ffffff;
   margin-bottom: 1rem;
   border: 1px solid #fbeeac;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .contactboxHeading {
-  color: #28527a;
+  color: #046582;
   font-weight: 600;
 }
 .UserMessage textarea {
