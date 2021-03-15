@@ -40,7 +40,7 @@ function AboutUs() {
           <div className="row justify-content-center text-center">
             <div className="col-md-8 col-lg-6">
               <div className="header-section">
-                <h2 className="title">About our team members</h2>
+                <h2 className="title">Our Team</h2>
               </div>
             </div>
           </div>
