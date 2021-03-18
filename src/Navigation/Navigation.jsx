@@ -17,6 +17,7 @@ import Register from "../Register/Register";
 import AboutUs from "../AboutUs/AboutUs";
 import Login from "../Login/Login";
 import { json } from "body-parser";
+import HospitalBeds from "../Hospital/HospitalBeds";
 
 function Navigation() {
   const hospital = JSON.parse(localStorage.getItem("hospital"));
@@ -40,6 +41,7 @@ function Navigation() {
           <Route path="/about" exact strict component={AboutUs} />
           <Route path="/login" exact strict component={Login} />
           <Route path="/updatebed" exact strict component={UpdateBed} />
+          <Route path="/:hospitalname/bookmybed" exact strict component={HospitalBeds}/>
         </Switch>
       </Router>
     </userContext.Provider>

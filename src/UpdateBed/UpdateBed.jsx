@@ -3,7 +3,7 @@ import "../Login/Login.css";
 import { useHistory, Redirect } from "react-router-dom";
 import axios from "axios";
 
-function Login() {
+function UpdateBed() {
 
   let history = useHistory();
   const hospital = JSON.parse(localStorage.getItem("hospital"));
@@ -73,4 +73,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default UpdateBed;

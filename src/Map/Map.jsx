@@ -1,11 +1,20 @@
 import "./Map.css";
 import React, { useRef, useEffect, useState } from "react";
-import { ReactBingmaps,Pushpin } from "react-bingmaps";
+import { ReactBingmaps } from "react-bingmaps";
 import Marker from "./Marker";
 
 function Map() {
   useEffect(() => {
-    
+    // pushPins = [
+    //   {
+    //     location: [13.0827, 80.2707],
+    //     option: { color: "red" },
+    //   },
+    //   {
+    //     location: [19.0827, 80.2707],
+    //     option: { color: "red" },
+    //   },
+    // ];
   }, []);
   return (
     <>
