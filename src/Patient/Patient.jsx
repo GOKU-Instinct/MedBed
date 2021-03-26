@@ -9,8 +9,8 @@ function Patient() {
       <input type="text"></input>
       <br></br>
       check in the database if first time enter details else directly book the
-      bed with the hospital name.
-      If the data of the user is not present send it to patientname route.
+      bed with the hospital name. If the data of the user is not present send it
+      to terms and condition then if aggrees forward it to patientname route.
     </>
   );
 }
