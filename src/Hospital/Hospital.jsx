@@ -21,7 +21,7 @@ function Hospital(props) {
       <Button variant="outlined" className={classes.root}>
         <Link
           to={{
-            pathname: `/${props.name}/bookmybed`,
+            pathname: `/${props.name}/hospitalbeds`,
           }}
         >
           BOOK NOW

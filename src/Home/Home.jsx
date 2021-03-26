@@ -37,6 +37,7 @@ function Home() {
     setHospitalName("LOGIN");
     localStorage.clear();
   }
+  var locations = [81.84657589975653, 25.436476775136647];
   return (
     <>
       <Nav location="/"></Nav>

@@ -1,5 +1,6 @@
 import React from "react";
 import Nav from "../Nav";
+import { Link } from "react-router-dom";
 import "./HospitalBeds.css";
 
 function HospitalBeds(props) {
@@ -9,7 +10,17 @@ function HospitalBeds(props) {
     <div>
       <Nav></Nav>
       <h1>{name}</h1>
-      hosital details and hospital image from backend
+      hosital details and hospital image from backend beds available and other
+      things
+      <button>
+        <Link
+          to={{
+            pathname: `/${name}/patient`,
+          }}
+        >
+          BOOK NOW
+        </Link>
+      </button>
     </div>
   );
 }

@@ -18,6 +18,9 @@ import AboutUs from "../AboutUs/AboutUs";
 import Login from "../Login/Login";
 import { json } from "body-parser";
 import HospitalBeds from "../Hospital/HospitalBeds";
+import Patient from "../Patient/Patient";
+import Terms from "../Terms";
+import PatientName from "../PatientName";
 
 function Navigation() {
   const hospital = JSON.parse(localStorage.getItem("hospital"));
@@ -41,7 +44,31 @@ function Navigation() {
           <Route path="/about" exact strict component={AboutUs} />
           <Route path="/login" exact strict component={Login} />
           <Route path="/updatebed" exact strict component={UpdateBed} />
-          <Route path="/:hospitalname/bookmybed" exact strict component={HospitalBeds}/>
+          <Route
+            path="/:hospitalname/hospitalbeds"
+            exact
+            strict
+            component={HospitalBeds}
+          />
+          <Route
+            path="/:hospitalname/patient"
+            exact
+            strict
+            component={Patient}
+          ></Route>
+          <Route
+            path="/Termsandconditions"
+            exact
+            strict
+            component={Terms}
+          ></Route>
+
+          <Route
+            path="/patientdetail"
+            exact
+            strict
+            component={PatientName}
+          ></Route>
         </Switch>
       </Router>
     </userContext.Provider>
