@@ -1,0 +1,11 @@
+.patient {
+  text-align: center;
+  height: 100%;
+  margin: 1rem;
+}
+.patient .patientSubmit {
+  margin: 1rem;
+}
+.note {
+  font-size: 1.2rem;
+}
